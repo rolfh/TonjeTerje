@@ -1,0 +1,144 @@
+.feedback {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.feedback span {
+  display: none;
+  font-size: 17px;
+  padding: 3px 5px;
+  background-color: #ff5beb;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+@media (min-width: 1200px) {
+  .feedback .xxl {
+    display: block;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .feedback .xl {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .feedback .l {
+    display: block;
+  }
+}
+@media (min-width: 551px) and (max-width: 767px) {
+  .feedback .m {
+    display: block;
+  }
+}
+@media (min-width: 321px) and (max-width: 550px) {
+  .feedback .s {
+    display: block;
+  }
+}
+@media (max-width: 320px) {
+  .feedback .xs {
+    display: block;
+  }
+}
+.container {
+  margin: 0 auto;
+  height: 100%;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.container.small-container {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .container.small-container {
+    width: 555px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container.small-container {
+    width: 455px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container.small-container {
+    width: 345px;
+  }
+}
+body {
+  margin: 0;
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.font1 {
+  font-family: 'Petit Formal Script', cursive;
+}
+.section {
+  position: relative;
+}
+.section-header {
+  background-image: url(img/fjell.jpg);
+  height: 100vh;
+}
+.section-details {
+  background-image: url('img/fjell.jpg');
+  background-image: url('img/bouquet.jpg');
+  height: 100vh;
+}
+.section-details .details-holder {
+  padding: 20px;
+  background: pink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-2deg);
+  width: 100%;
+  border: 10px solid white;
+  box-shadow: 0 0 50px #ffdce2;
+  text-align: center;
+  color: #684c51;
+}
+#logo {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 420px;
+  height: auto;
+  max-width: 85%;
+}

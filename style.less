@@ -1,0 +1,143 @@
+@xxl: ~'(min-width: 1200px)';
+@xl: ~'(min-width: 992px) and (max-width: 1199px)';
+@l: ~'(min-width: 768px) and (max-width: 991px)';
+@m: ~'(min-width: 551px) and (max-width: 767px)';
+@s: ~'(min-width: 321px) and (max-width: 550px)';
+@xs: ~'(max-width: 320px)';
+
+.feedback {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+
+	span {
+		display: none;
+		font-size: 17px;
+		padding: 3px 5px;
+		background-color: #ff5beb;
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+	}
+	@media @xxl {
+		.xxl {
+			display: block;
+		}
+	}
+	@media @xl {
+		.xl {
+			display: block;
+		}
+	}
+	@media @l {
+		.l {
+			display: block;
+		}
+	}
+	@media @m {
+		.m {
+			display: block;
+		}
+	}
+	@media @s {
+		.s {
+			display: block;
+		}
+	}
+	@media @xs {
+		.xs {
+			display: block;
+		}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	height: 100%;
+	@media @xxl {
+		width: 1170px;
+	}
+	@media @xl {
+		width: 970px;
+	}
+	@media @l {
+		width: 750px;
+	}
+	@media @m, @s, @xs {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	&.small-container {
+		position: relative;
+		@media @xxl {
+			width: 555px;
+		}
+		@media @xl {
+			width: 455px;
+		}
+		@media @l {
+			width: 345px;
+		}
+	}
+}
+
+body {
+	margin: 0;
+}
+
+*,
+:before,
+:after {
+	box-sizing: border-box;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.font1 {
+	font-family: 'Petit Formal Script', cursive;
+}
+
+.section {
+	position: relative;
+}
+
+.section-header {
+	background-image: url(img/fjell.jpg);
+	height: 100vh;
+}
+.section-details {
+	background-image: url('img/fjell.jpg');
+	background-image: url('img/bouquet.jpg');
+	height: 100vh;
+	.details-holder {
+		padding: 20px;
+		background: pink;
+		.center;
+		transform: translate(-50%, -50%) rotate(-2deg);
+		width: 100%;
+		border: 10px solid white;
+		box-shadow: 0 0 50px #ffdce2;
+		text-align: center;
+		color: #684c51;
+	}
+}
+
+#logo {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	width: 420px;
+	height: auto;
+	max-width: 85%;
+}
