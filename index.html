@@ -9,21 +9,97 @@
 	</head>
 	<body>
 		<div class="section section-header">
+			<div class="bottom-color"></div>
+			<div class="top-img"></div>
 			<div class="container">
-				<img
-					src="img/logo-white2.svg"
-					alt="Tonje og Terje logo"
-					id="logo"
-				/>
+				<div class="logo-container">
+					<div class="logo-bg"></div>
+					<img
+						src="img/logo-white4.svg"
+						alt="Tonje og Terje logo"
+						id="logo"
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="section section-details">
 			<div class="container small-container">
 				<div class="details-holder">
-					<h2>Hommelvik kirke kl 13</h2>
+					<h2>Hommelvik kirke <br />7. september kl 13</h2>
 					<h3>Middag og fest på Svebergtunet kl 16</h3>
-					<p>Svar innen 10. mai</p>
+					<p>
+						Svar Terje innen 10. mai <br />på epost:
+						<a href="mailto:terje.kammen@gmail.com">
+							terje.kammen@gmail.com</a
+						>
+						<br />
+						eller ring <a href="tel:95789833">957 89 833</a>
+					</p>
+					<img src="img/blomst.png" alt="Blomst" class="flower" />
 				</div>
+			</div>
+		</div>
+		<div class="section section-time">
+			<div class="container small-container">
+				<div class="details-holder">
+					<div id="countDownTimer">
+						<p id="rings-icon">
+							<img src="img/wedding-rings.svg" alt="klokke" />
+						</p>
+						<span>
+							<div class="number">{{ time.days }}</div>
+							<div class="desc" v-if="time.days == 1">dag</div>
+							<div class="desc" v-else>dager</div>
+						</span>
+						<span>
+							<div class="number">{{ time.hours }}</div>
+							<div class="desc" v-if="time.hours == 1">
+								time
+							</div>
+							<div class="desc" v-else>timer</div>
+						</span>
+						<span>
+							<div class="number">{{ time.minutes }}</div>
+							<div class="desc" v-if="time.minutes == 1">
+								minutt
+							</div>
+							<div class="desc" v-else>minutter</div>
+						</span>
+						<span>
+							<div class="number">{{ time.seconds }}</div>
+							<div class="desc" v-if="time.seconds == 1">
+								sekund
+							</div>
+							<div class="desc" v-else>sekunder</div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-pictures">
+			<div class="container">
+				<ul id="pictures">
+					<li class="image">
+						<img src="img/drinks.jpg" alt="" />
+						<p class="title">Titteltekst</p>
+					</li>
+					<li class="image">
+						<img src="img/kiss.jpg" alt="" />
+						<p class="title">Titteltekst</p>
+					</li>
+					<li class="image">
+						<img src="img/boat.jpg" alt="" />
+						<p class="title">Titteltekst</p>
+					</li>
+					<li class="image">
+						<img src="img/strand.jpg" alt="" />
+						<p class="title">Titteltekst</p>
+					</li>
+					<li class="image">
+						<img src="img/mountain.jpg" alt="" />
+						<p class="title">Titteltekst</p>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="feedback">
@@ -31,6 +107,7 @@
 			<span class="l">l</span> <span class="m">m</span>
 			<span class="s">s</span> <span class="xs">xs</span>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
