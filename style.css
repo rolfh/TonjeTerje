@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300');
 .feedback {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
