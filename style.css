@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 .feedback {
   display: none;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 100;
+}
+.fffeedback .feedback {
+  display: block;
 }
 .feedback span {
   display: none;
@@ -76,19 +80,9 @@
 .container.small-container > * {
   margin: auto;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px), (min-width: 992px) and (max-width: 1199px), (min-width: 768px) and (max-width: 991px) {
   .container.small-container {
     width: 555px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container.small-container {
-    width: 455px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .container.small-container {
-    width: 345px;
   }
 }
 body {
@@ -149,7 +143,7 @@ h5 {
 h2 {
   font-size: 40px;
 }
-@media (min-width: 768px) and (max-width: 991px), (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   h2 {
     font-size: 26px;
   }
@@ -159,7 +153,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-@media (min-width: 768px) and (max-width: 991px), (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   h3 {
     font-size: 18px;
   }
@@ -170,7 +164,7 @@ ul {
   font-size: 19px;
   line-height: 1.75em;
 }
-@media (min-width: 768px) and (max-width: 991px), (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   p,
   ul {
     font-size: 18px;
@@ -196,29 +190,39 @@ ul a:hover {
 }
 .section-header .top-img {
   width: 100vw;
-  height: 80vh;
+  height: calc(100vh - 200px);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 20vh;
+  bottom: calc(100vh - 200px);
   z-index: -1;
   background-image: url(img/mountain.jpg);
   background-position: top center;
 }
+@media (orientation: landscape) {
+  .section-header .top-img {
+    height: calc(100vh - 110px);
+  }
+}
 .section-header .bottom-color {
-  width: 200vw;
-  height: 200vh;
+  width: 130vw;
+  height: calc(250px + 3vw);
   position: absolute;
-  top: 80%;
-  left: -10vh;
+  top: calc(100vh - 200px);
+  left: 0;
   transform-origin: 0 0;
-  transform: rotate(-4deg);
-  background: #0a3057;
+  transform: rotate(-3deg) translateX(-10%);
+  background-color: #0a3057;
   background-image: url(img/flower-wall.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (orientation: landscape) {
+  .section-header .bottom-color {
+    top: calc(100vh - 110px);
+  }
 }
 .logo-container {
   position: absolute;
@@ -232,13 +236,20 @@ ul a:hover {
   padding: 20px;
   border-radius: 1000px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  background: #0a3057;
+  background-color: #0a3057;
   display: flex;
 }
 @media (max-width: 500px) {
   .logo-container {
     width: 80vw;
     height: 80vw;
+  }
+}
+@media (orientation: landscape) {
+  .logo-container {
+    width: 25vw;
+    height: 25vw;
+    bottom: -20px;
   }
 }
 #logo {
@@ -257,7 +268,8 @@ ul a:hover {
 .details-holder {
   padding: 20px 50px;
   padding-top: 0;
-  background: #0a3057;
+  background-color: #0a3057;
+  background-image: url(img/flower-wall.jpg);
   position: relative;
   outline: 2px solid #f7f7cb;
   outline-offset: -10px;
@@ -288,8 +300,9 @@ ul a:hover {
   background-image: url('img/flower-wall.jpg');
 }
 .section-time .details-holder {
-  padding: 20px;
-  background: transparent;
+  padding: 30px;
+  background-color: transparent;
+  background-image: none;
   box-shadow: none;
   outline-offset: 0;
   outline: none;
@@ -306,7 +319,7 @@ ul a:hover {
   left: 0;
   width: calc(50% - 70px);
   height: 5px;
-  background: #f7f7cb;
+  background-color: #f7f7cb;
 }
 .section-time .details-holder:before {
   right: auto;
@@ -335,13 +348,15 @@ ul a:hover {
   }
 }
 #countDownTimer .number {
-  font-size: 100px;
+  font-size: 80px;
+  line-height: 80px;
   padding: 0 20px;
   font-family: 'Playfair Display', serif;
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   #countDownTimer .number {
-    font-size: 75px;
+    line-height: 70px;
+    font-size: 70px;
   }
 }
 #countDownTimer .desc {
@@ -361,14 +376,7 @@ ul a:hover {
   width: 100px;
 }
 .section-pictures {
-  padding: 60px 0;
-  background-image: url('img/flower-vase.jpg');
-  height: auto;
-}
-@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
-  .section-pictures {
-    padding: 8vw 0;
-  }
+  background-color: #0a315a;
 }
 #pictures {
   list-style: none;
@@ -381,15 +389,24 @@ ul a:hover {
 #pictures li {
   transform: rotate(-2deg);
   text-align: center;
-  background: white;
-  padding: 15px;
+  background-color: white;
+  padding: 2%;
   margin-bottom: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  background-image: url(img/polaroid.jpg);
+  background-size: 100% 102%;
+}
+#pictures li p {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+  color: #233ca9;
+  margin: 0;
+  padding: 10px 0;
+  text-shadow: 2px 2px 0 white;
 }
 @media (min-width: 1200px), (min-width: 992px) and (max-width: 1199px), (min-width: 768px) and (max-width: 991px) {
   #pictures li {
     margin-left: -20px;
-    width: 50%;
   }
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
@@ -405,10 +422,11 @@ ul a:hover {
     margin-left: 20px;
   }
 }
-#pictures li p {
-  margin: 0;
-  padding: 10px 0;
-}
 #pictures img {
   max-width: 100%;
+}
+#triangles {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

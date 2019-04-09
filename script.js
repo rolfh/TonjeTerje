@@ -23,3 +23,14 @@ var timer = new Vue({
 		}
 	}
 })
+
+var keyboard = []
+document.addEventListener('keydown', function(event) {
+	keyboard.push(event.key)
+	if (keyboard.length > 3) {
+		keyboard.shift()
+	}
+	if (keyboard.join('') == 'fff') {
+		document.body.classList.toggle('fffeedback')
+	}
+})

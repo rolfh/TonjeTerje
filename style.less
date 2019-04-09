@@ -6,12 +6,15 @@
 @xs: ~'(max-width: 320px)';
 
 .feedback {
-	// display: block;
 	display: none;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	z-index: 100;
+
+	.fffeedback & {
+		display: block;
+	}
 
 	span {
 		display: none;
@@ -75,19 +78,14 @@
 			margin: auto;
 		}
 		position: relative;
-		@media @xxl {
+		@media @xxl, @xl, @l {
 			width: 555px;
-		}
-		@media @xl {
-			width: 455px;
-		}
-		@media @l {
-			width: 345px;
 		}
 	}
 }
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 
 @blue: #0a3057;
 @accentBright: #f7f7cb;
@@ -138,7 +136,7 @@ h5 {
 }
 h2 {
 	font-size: 40px;
-	@media @l, @m, @s, @xs {
+	@media @m, @s, @xs {
 		font-size: 26px;
 	}
 }
@@ -146,7 +144,7 @@ h3 {
 	font-size: 22px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	@media @l, @m, @s, @xs {
+	@media @m, @s, @xs {
 		font-size: 18px;
 	}
 }
@@ -156,7 +154,7 @@ ul {
 	// font-size: 23px;
 	font-size: 19px;
 	line-height: 1.75em;
-	@media @l, @m, @s, @xs {
+	@media @m, @s, @xs {
 		font-size: 18px;
 	}
 	a {
@@ -178,30 +176,39 @@ ul {
 	padding: 0;
 	.top-img {
 		width: 100vw;
-		height: 80vh;
-
+		// height: 80vh;
+		height: ~'calc(100vh - 200px)';
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-		bottom: 20vh;
+		// bottom: 20vh;
+		bottom: ~'calc(100vh - 200px)';
 		z-index: -1;
 		background-image: url(img/mountain.jpg);
 		background-position: top center;
+		@media (orientation: landscape) {
+			height: ~'calc(100vh - 110px)';
+		}
 	}
 	.bottom-color {
-		width: 200vw;
-		height: 200vh;
+		width: 130vw;
+		// height: 70vh;
+		height: ~'calc(250px + 3vw)';
 		position: absolute;
-		top: 80%;
-		left: -10vh;
+		// top: 70%;
+		top: ~'calc(100vh - 200px)';
+		left: 0;
 		transform-origin: 0 0;
-		transform: rotate(-4deg);
-		background: @blue;
+		transform: rotate(-3deg) translateX(-10%);
+		background-color: @blue;
 		background-image: url(img/flower-wall.jpg);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		@media (orientation: landscape) {
+			top: ~'calc(100vh - 110px)';
+		}
 	}
 }
 
@@ -217,11 +224,17 @@ ul {
 	padding: 20px;
 	border-radius: 1000px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-	background: @blue;
+	background-color: @blue;
 	display: flex;
+
 	@media (max-width: 500px) {
 		width: 80vw;
 		height: 80vw;
+	}
+	@media (orientation: landscape) {
+		width: 25vw;
+		height: 25vw;
+		bottom: -20px;
 	}
 }
 
@@ -246,7 +259,8 @@ ul {
 		padding: 8vw;
 		padding-top: 0;
 	}
-	background: @blue;
+	background-color: @blue;
+	background-image: url(img/flower-wall.jpg);
 	position: relative;
 	.outline;
 	box-shadow: 0 0 120px #ffffff;
@@ -267,8 +281,9 @@ ul {
 .section-time {
 	background-image: url('img/flower-wall.jpg');
 	.details-holder {
-		padding: 20px;
-		background: transparent;
+		padding: 30px;
+		background-color: transparent;
+		background-image: none;
 		box-shadow: none;
 		outline-offset: 0;
 		outline: none;
@@ -284,7 +299,7 @@ ul {
 			left: 0;
 			width: ~'calc(50% - 70px)';
 			height: 5px;
-			background: @accentBright;
+			background-color: @accentBright;
 		}
 		&:before {
 			right: auto;
@@ -313,11 +328,13 @@ ul {
 	}
 
 	.number {
-		font-size: 100px;
+		font-size: 80px;
+		line-height: 80px;
 		padding: 0 20px;
 		.font1;
 		@media @m, @s, @xs {
-			font-size: 75px;
+			line-height: 70px;
+			font-size: 70px;
 		}
 	}
 
@@ -341,12 +358,7 @@ ul {
 }
 
 .section-pictures {
-	padding: 60px 0;
-	background-image: url('img/flower-vase.jpg');
-	height: auto;
-	@media @m, @s, @xs {
-		padding: 8vw 0;
-	}
+	background-color: #0a315a;
 }
 
 #pictures {
@@ -359,13 +371,23 @@ ul {
 	li {
 		transform: rotate(-2deg);
 		text-align: center;
-		background: white;
-		padding: 15px;
+		background-color: white;
+		padding: 2%;
 		margin-bottom: 50px;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+		border-radius: 5px;
+		background-image: url(img/polaroid.jpg);
+		background-size: 100% 102%;
+		p {
+			font-family: 'Gochi Hand', cursive;
+			font-size: 30px;
+			color: #233ca9;
+			margin: 0;
+			padding: 10px 0;
+			text-shadow: 2px 2px 0 white;
+		}
 		@media @xxl, @xl, @l {
 			margin-left: -20px;
-			width: 50%;
+			// width: 50%;
 		}
 		@media @m, @s, @xs {
 			padding: 3vw;
@@ -376,13 +398,14 @@ ul {
 			}
 			transform: rotate(2deg);
 		}
-		p {
-			margin: 0;
-			padding: 10px 0;
-		}
 	}
 	img {
-		// width: 800px;
 		max-width: 100%;
 	}
+}
+
+#triangles {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
