@@ -29,7 +29,8 @@ var minSpeed = 0.1
 var maxSpeed = 1.5
 var triangles = []
 // var colors = ['#0a315a', '#041f3a', '#0d4b8d', '#673ab7']
-var colors = ['#041f3a', '#0d4b8d', '#673ab7']
+// var colors = ['#041f3a', '#0e4866', '#673ab7']
+var colors = ['#debb6a', '#0d4b8d', '#d9d9d9']
 
 function canvasSize() {
 	width = sectionPictures.offsetWidth

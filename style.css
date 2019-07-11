@@ -273,6 +273,7 @@ ul a:hover {
   right: 0;
   transform: translate(50%, -50%);
   width: 170px;
+  filter: hue-rotate(-46deg) saturate(0.75);
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   .details-holder .flower {
@@ -359,10 +360,6 @@ ul a:hover {
 }
 #countDownTimer #rings-icon img {
   width: 100px;
-}
-.section-pictures {
-  background-color: #0a315a;
-  background-color: #0e4866;
 }
 #pictures {
   list-style: none;
