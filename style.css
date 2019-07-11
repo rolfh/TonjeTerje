@@ -187,42 +187,39 @@ ul a:hover {
 }
 .section-header {
   padding: 0;
+  /*
+	.bottom-color {
+		width: 130vw;
+		// height: 70vh;
+		height: ~'calc(250px + 3vw)';
+		position: absolute;
+		// top: 70%;
+		top: ~'calc(100vh - 200px)';
+		left: 0;
+		transform-origin: 0 0;
+		transform: rotate(-3deg) translateX(-10%);
+		background-color: @blue;
+		background-image: url(img/flower-wall.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media (orientation: landscape) {
+			top: ~'calc(100vh - 110px)';
+		}
+	}
+	*/
 }
 .section-header .top-img {
   width: 100vw;
-  height: calc(100vh - 200px);
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: calc(100vh - 200px);
+  bottom: 0;
   z-index: -1;
   background-image: url(img/mountain.jpg);
   background-position: top center;
-}
-@media (orientation: landscape) {
-  .section-header .top-img {
-    height: calc(100vh - 110px);
-  }
-}
-.section-header .bottom-color {
-  width: 130vw;
-  height: calc(250px + 3vw);
-  position: absolute;
-  top: calc(100vh - 200px);
-  left: 0;
-  transform-origin: 0 0;
-  transform: rotate(-3deg) translateX(-10%);
-  background-color: #0a3057;
-  background-image: url(img/flower-wall.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media (orientation: landscape) {
-  .section-header .bottom-color {
-    top: calc(100vh - 110px);
-  }
 }
 .logo-container {
   position: absolute;
@@ -230,49 +227,32 @@ ul a:hover {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  width: 350px;
-  height: 350px;
-  max-width: 85%;
-  padding: 20px;
-  border-radius: 1000px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  background-color: #0a3057;
+  max-width: 100%;
   display: flex;
 }
-@media (max-width: 500px) {
-  .logo-container {
-    width: 80vw;
-    height: 80vw;
-  }
-}
-@media (orientation: landscape) {
-  .logo-container {
-    width: 25vw;
-    height: 25vw;
-    bottom: -20px;
-  }
-}
 #logo {
-  height: auto;
   max-width: 100%;
   margin: auto;
-  margin-right: -1%;
+  width: 300px;
 }
 .outline {
-  outline: 2px solid #f7f7cb;
-  outline-offset: -10px;
+  outline: 5px solid #f7f7cb;
+  outline-offset: -15px;
+}
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+  .outline {
+    outline: 3px solid #f7f7cb;
+  }
 }
 .section-details {
   background-image: url('img/bouquet.jpg');
 }
 .details-holder {
-  padding: 20px 50px;
-  padding-top: 0;
-  background-color: #0a3057;
-  background-image: url(img/flower-wall.jpg);
+  padding: 40px 50px;
+  background-color: #0e4866;
   position: relative;
-  outline: 2px solid #f7f7cb;
-  outline-offset: -10px;
+  outline: 5px solid #f7f7cb;
+  outline-offset: -15px;
   box-shadow: 0 0 120px #ffffff;
   text-align: center;
   color: #f7f7cb;
@@ -280,7 +260,11 @@ ul a:hover {
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   .details-holder {
     padding: 8vw;
-    padding-top: 0;
+  }
+}
+@media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
+  .details-holder {
+    outline: 3px solid #f7f7cb;
   }
 }
 .details-holder .flower {
@@ -298,6 +282,7 @@ ul a:hover {
 }
 .section-time {
   background-image: url('img/flower-wall.jpg');
+  filter: hue-rotate(-15deg) saturate(0.75);
 }
 .section-time .details-holder {
   padding: 30px;
@@ -377,6 +362,7 @@ ul a:hover {
 }
 .section-pictures {
   background-color: #0a315a;
+  background-color: #0e4866;
 }
 #pictures {
   list-style: none;
@@ -399,7 +385,7 @@ ul a:hover {
 #pictures li p {
   font-family: 'Gochi Hand', cursive;
   font-size: 30px;
-  color: #233ca9;
+  color: #0e4866;
   margin: 0;
   padding: 10px 0;
   text-shadow: 2px 2px 0 white;

@@ -88,6 +88,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 
 @blue: #0a3057;
+@blue2: #0e4866;
 @accentBright: #f7f7cb;
 @accentDark: #debb6a;
 
@@ -177,20 +178,23 @@ ul {
 	.top-img {
 		width: 100vw;
 		// height: 80vh;
-		height: ~'calc(100vh - 200px)';
+		// height: ~'calc(100vh - 200px)';
+		height: 100vh;
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
+		bottom: 0;
 		// bottom: 20vh;
-		bottom: ~'calc(100vh - 200px)';
+		// bottom: ~'calc(100vh - 200px)';
 		z-index: -1;
 		background-image: url(img/mountain.jpg);
 		background-position: top center;
-		@media (orientation: landscape) {
-			height: ~'calc(100vh - 110px)';
-		}
+		// @media (orientation: landscape) {
+		// 	height: ~'calc(100vh - 110px)';
+		// }
 	}
+	/*
 	.bottom-color {
 		width: 130vw;
 		// height: 70vh;
@@ -210,6 +214,7 @@ ul {
 			top: ~'calc(100vh - 110px)';
 		}
 	}
+	*/
 }
 
 .logo-container {
@@ -218,49 +223,54 @@ ul {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 10;
-	width: 350px;
-	height: 350px;
-	max-width: 85%;
-	padding: 20px;
-	border-radius: 1000px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-	background-color: @blue;
+	// width: 350px;
+	// height: 350px;
+	max-width: 100%;
+	// padding: 20px;
+	// border-radius: 1000px;
+	// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+	// background-color: @blue;
 	display: flex;
 
 	@media (max-width: 500px) {
-		width: 80vw;
-		height: 80vw;
+		// width: 80vw;
+		// height: 80vw;
 	}
 	@media (orientation: landscape) {
-		width: 25vw;
-		height: 25vw;
-		bottom: -20px;
+		// width: 25vw;
+		// height: 25vw;
+		// bottom: -20px;
 	}
 }
 
 #logo {
-	height: auto;
+	// height: auto;
 	max-width: 100%;
 	margin: auto;
-	margin-right: -1%;
+	width: 300px;
+	// margin-right: -1%;
 }
 
 .outline {
-	outline: 2px solid @accentBright;
-	outline-offset: -10px;
+	outline: 5px solid @accentBright;
+	outline-offset: -15px;
+	@media @m, @s, @xs {
+		outline: 3px solid @accentBright;
+	}
 }
 .section-details {
 	background-image: url('img/bouquet.jpg');
 }
 .details-holder {
-	padding: 20px 50px;
-	padding-top: 0;
+	padding: 40px 50px;
+	// padding-top: 0;
 	@media @m, @s, @xs {
 		padding: 8vw;
-		padding-top: 0;
+		// padding-top: 0;
 	}
-	background-color: @blue;
-	background-image: url(img/flower-wall.jpg);
+	// background-color: @blue;
+	background-color: @blue2;
+	// background-image: url(img/flower-wall.jpg);
 	position: relative;
 	.outline;
 	box-shadow: 0 0 120px #ffffff;
@@ -280,6 +290,7 @@ ul {
 }
 .section-time {
 	background-image: url('img/flower-wall.jpg');
+	filter: hue-rotate(-15deg) saturate(0.75);
 	.details-holder {
 		padding: 30px;
 		background-color: transparent;
@@ -359,6 +370,7 @@ ul {
 
 .section-pictures {
 	background-color: #0a315a;
+	background-color: @blue2;
 }
 
 #pictures {
@@ -380,7 +392,8 @@ ul {
 		p {
 			font-family: 'Gochi Hand', cursive;
 			font-size: 30px;
-			color: #233ca9;
+			// color: #233ca9;
+			color: @blue2;
 			margin: 0;
 			padding: 10px 0;
 			text-shadow: 2px 2px 0 white;
