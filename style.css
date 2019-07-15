@@ -173,12 +173,13 @@ ul {
 p a,
 ul a {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #f7f7cb;
   transition: border 0.2s ease-out;
 }
 p a:hover,
 ul a:hover {
-  border-color: #f7f7cb;
+  color: white;
+  border-color: white;
 }
 .section {
   position: relative;

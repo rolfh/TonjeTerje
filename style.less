@@ -160,10 +160,12 @@ ul {
 	}
 	a {
 		text-decoration: none;
-		border-bottom: 1px solid transparent;
+		border-bottom: 1px solid @accentBright;
 		transition: border 0.2s ease-out;
 		&:hover {
-			border-color: @accentBright;
+			// border-color: @accentBright;
+			color: white;
+			border-color: white;
 		}
 	}
 }
