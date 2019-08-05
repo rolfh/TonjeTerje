@@ -228,7 +228,6 @@ ul a:hover {
   transform: translateX(-50%);
   z-index: 10;
   max-width: 100%;
-  display: flex;
 }
 @media (max-width: 500px) {
 }
