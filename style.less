@@ -20,7 +20,7 @@
 		display: none;
 		font-size: 17px;
 		padding: 3px 5px;
-		background-color: #ff5beb;
+		// background-color: #ff5beb;
 		color: white;
 		font-family: 'Montserrat', sans-serif;
 	}
@@ -88,9 +88,14 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 
 @blue: #0a3057;
-@blue2: #0e4866;
-@accentBright: #f7f7cb;
-@accentDark: #debb6a;
+// @blue2: #0e4866;
+@blue2: #042745;
+// @accentBright: #f7f7cb;
+// @accentBright: #bab173;
+@accentBright: #b3b3b3;
+// @accentDark: #debb6a;
+@accentDark: #f7f7cb;
+@accentDark: #f7f7cb;
 
 body {
 	margin: 0;
@@ -254,7 +259,7 @@ ul {
 }
 
 .outline {
-	outline: 5px solid @accentBright;
+	outline: 2px solid @accentBright;
 	outline-offset: -15px;
 	@media @m, @s, @xs {
 		outline: 3px solid @accentBright;
@@ -262,6 +267,7 @@ ul {
 }
 .section-details {
 	background-image: url('img/bouquet.jpg');
+	overflow: visible;
 }
 .details-holder {
 	padding: 40px 50px;
@@ -277,7 +283,8 @@ ul {
 	.outline;
 	box-shadow: 0 0 120px #ffffff;
 	text-align: center;
-	color: @accentBright;
+	// color: @accentBright;
+	color: #dbdbdb;
 	.flower {
 		position: absolute;
 		top: 0;

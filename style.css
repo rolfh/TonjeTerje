@@ -14,7 +14,6 @@
   display: none;
   font-size: 17px;
   padding: 3px 5px;
-  background-color: #ff5beb;
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
@@ -120,7 +119,7 @@ h5 a,
 h6 a,
 p a,
 ul a {
-  color: #f7f7cb;
+  color: #b3b3b3;
 }
 h1 a:hover,
 h2 a:hover,
@@ -130,7 +129,7 @@ h5 a:hover,
 h6 a:hover,
 p a:hover,
 ul a:hover {
-  color: #f7f7cb;
+  color: #b3b3b3;
 }
 h1,
 h2,
@@ -173,7 +172,7 @@ ul {
 p a,
 ul a {
   text-decoration: none;
-  border-bottom: 1px solid #f7f7cb;
+  border-bottom: 1px solid #b3b3b3;
   transition: border 0.2s ease-out;
 }
 p a:hover,
@@ -231,32 +230,37 @@ ul a:hover {
   max-width: 100%;
   display: flex;
 }
+@media (max-width: 500px) {
+}
+@media (orientation: landscape) {
+}
 #logo {
   max-width: 100%;
   margin: auto;
   width: 300px;
 }
 .outline {
-  outline: 5px solid #f7f7cb;
+  outline: 2px solid #b3b3b3;
   outline-offset: -15px;
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   .outline {
-    outline: 3px solid #f7f7cb;
+    outline: 3px solid #b3b3b3;
   }
 }
 .section-details {
   background-image: url('img/bouquet.jpg');
+  overflow: visible;
 }
 .details-holder {
   padding: 40px 50px;
-  background-color: #0e4866;
+  background-color: #042745;
   position: relative;
-  outline: 5px solid #f7f7cb;
+  outline: 2px solid #b3b3b3;
   outline-offset: -15px;
   box-shadow: 0 0 120px #ffffff;
   text-align: center;
-  color: #f7f7cb;
+  color: #dbdbdb;
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   .details-holder {
@@ -265,7 +269,7 @@ ul a:hover {
 }
 @media (min-width: 551px) and (max-width: 767px), (min-width: 321px) and (max-width: 550px), (max-width: 320px) {
   .details-holder {
-    outline: 3px solid #f7f7cb;
+    outline: 3px solid #b3b3b3;
   }
 }
 .details-holder .flower {
@@ -293,7 +297,7 @@ ul a:hover {
   box-shadow: none;
   outline-offset: 0;
   outline: none;
-  border: 5px solid #f7f7cb;
+  border: 5px solid #b3b3b3;
   border-top: none;
 }
 .section-time .details-holder:before,
@@ -306,7 +310,7 @@ ul a:hover {
   left: 0;
   width: calc(50% - 70px);
   height: 5px;
-  background-color: #f7f7cb;
+  background-color: #b3b3b3;
 }
 .section-time .details-holder:before {
   right: auto;
@@ -383,7 +387,7 @@ ul a:hover {
 #pictures li p {
   font-family: 'Gochi Hand', cursive;
   font-size: 30px;
-  color: #0e4866;
+  color: #042745;
   margin: 0;
   padding: 10px 0;
   text-shadow: 2px 2px 0 white;
